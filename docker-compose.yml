@@ -1,0 +1,12 @@
+version: '3.5'
+services:
+  app:
+    build:
+      context: ./
+      dockerfile: .docker/app.docker
+    stdin_open: true
+    tty: true
+    volumes:
+      - ./:/code
+    ports:
+      - '14480:5000'
